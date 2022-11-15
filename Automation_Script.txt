@@ -1,0 +1,66 @@
+from selenium import webdriver
+from selenium.webdriver.support.color import Color
+driver = webdriver.Chrome('C:\chromedriver.exe')
+
+######### Chykalophia Website###########
+
+driver.get('https://chykalophia.com')
+driver.maximize_window()
+
+#### Footer Icons ####
+
+#Linked in 
+linkedin = driver.find_element("xpath", "//span[@class='elementor-grid-item'][1]")
+linkedin.click()
+linkedin_icon = driver.find_element_by_xpath("//header//icon/*")
+
+
+
+#Facebook
+
+facebook = driver.find_element("xpath", "//span[@class='elementor-grid-item'][2]")
+facebook.click()
+facebook_icon = driver.find_element_by_xpath("//h1[text()='Chykalophia']")
+
+#Twitter
+
+twitter = driver.find_element("xpath", "//span[@class='elementor-grid-item'][3]")
+twitter.click()
+twitter_icon = driver.find_element_by_xpath("//h1//div/*")
+
+#Instagram
+
+instagram = driver.find_element("xpath", "//span[@class='elementor-grid-item'][4]")
+instagram.click()
+instagram_icon = driver.find_element_by_xpath("//*[@aria-label='Instagram']")
+
+
+#Youtube
+
+youtube = driver.find_element("xpath", "//span[@class='elementor-grid-item'][5]")
+youtube.click()
+youtube_icon = driver.find_element_by_xpath("//div[contains(@class,'topbar')]")
+
+#github
+
+github = driver.find_element("xpath", "//span[@class='elementor-grid-item'][6]")
+github.click()
+github_icon = driver.find_element_by_xpath("//header//a[@aria-label='Homepage']")
+
+
+#Behance
+behance = driver.find_element("xpath", "//span[@class='elementor-grid-item'][7]")
+behance.click()
+behance_icon = driver.find_element_by_xpath("//a[@title='Behance']")
+
+
+#Privacy Policy
+privacy_policy = driver.find_element("xpath", "//a[text()='Privacy Policy']")
+privacy_policy.click()
+privacy_policy_icon = driver.find_element_by_xpath("//h1[contains(text(), 'Privacy Policy of')]")
+
+#Cookie Policy
+driver.back()
+cookie_policy = driver.find_element("xpath", "//a[text()='Cookie Policy']")
+cookie_policy.click()
+cookie_policy_icon = driver.find_element_by_xpath("//h2[contains(text(), 'Cookie Policy')]")
